@@ -1,0 +1,33 @@
+{
+  "name": "kipln-apigateway",
+  "version": "1.0.0",
+  "description": "",
+  "main": "api/server.js",
+  "scripts": {
+    "test": "PROCESS_TYPE=api mocha '{,!(node_modules)/**/}*.test.js' --color --no-timeouts",
+    "start": "PROCESS_TYPE=api node api/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "asoriba-payment": "1.1.1",
+    "dotenv": "6.2.0",
+    "express": "4.16.4",
+    "express-validator": "5.3.1",
+    "joi": "14.3.1",
+    "lodash": "4.17.11",
+    "morgan": "1.9.1",
+    "ramda": "0.26.1",
+    "uuid": "3.3.2"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "chai-as-promised": "7.1.1",
+    "mocha": "6.0.1",
+    "nock": "10.0.6",
+    "sinon": "7.2.4",
+    "superagent-defaults": "0.1.14",
+    "supertest": "3.4.2",
+    "supertest-prefix": "1.0.2"
+  }
+}
