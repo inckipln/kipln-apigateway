@@ -1,0 +1,16 @@
+version: "3"
+services:
+  apigateway:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gateway
+    user: "root"
+    environment:
+      NODE_ENV: production
+      PROCESS_TYPE: api
+    volumes:
+      - .:/app
+      - /app/node_modules
+    env_file: .env
+    command: "npm start"

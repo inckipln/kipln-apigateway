@@ -8,7 +8,9 @@ const pipe = require('../../../lib/pipe')
 
 const initializePayment = (req, res, next) => {
     return pipe(
+        tap(console.log),
         payment.checkout,
+        tap(console.log),
         respond({status: httpStatus.CREATED, res})
     )(req.body)
     .catch(next)
